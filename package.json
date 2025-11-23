@@ -1,0 +1,17 @@
+{
+  "name": "design-system-builder",
+  "version": "0.1.0",
+  "description": "This SaaS is a beautiful frontend helping developpers to create their design system to build apps. Inspired by PicoCSS, you can customize nezrly every HTML tags, see components examples rendered with your UI and finaly export your design system into a single css file or a tailwindcss configuration file",
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Development scripts will be added by agents\"",
+    "build": "echo \"Build scripts will be added by agents\"",
+    "test": "echo \"Test scripts will be added by agents\""
+  },
+  "keywords": [
+    "saas",
+    "ai-powered"
+  ],
+  "author": "",
+  "license": "MIT"
+}
