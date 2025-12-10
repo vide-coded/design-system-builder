@@ -1,97 +1,79 @@
-# design-system-builder
+# Design System Builder
 
-This SaaS is a beautiful frontend helping developpers to create their design system to build apps. Inspired by PicoCSS, you can customize nezrly every HTML tags, see components examples rendered with your UI and finaly export your design system into a single css file or a tailwindcss configuration file
+A visual tool to create and customize design systems with live preview and export capabilities.
 
-## 🚀 Built with saas-forge
+## 🚀 Quick Start
 
-This project was initialized with [saas-forge](https://github.com/yourusername/saas-forge), an AI-powered SaaS builder.
+```bash
+# Install dependencies
+npm install
 
-## 📋 Getting Started
+# Start development server
+npm run dev
 
-### 1. Brief the Orchestrator
+# Build for production
+npm run build
 
-Open GitHub Copilot Chat in VSCode and reference the orchestrator:
+# Preview production build
+npm run preview
 
+# Lint code
+npm run lint
+
+# Format code
+npm run format
 ```
-@#file:.github/agents/core/orchestrator.md
 
-This SaaS is a beautiful frontend helping developpers to create their design system to build apps. Inspired by PicoCSS, you can customize nezrly every HTML tags, see components examples rendered with your UI and finaly export your design system into a single css file or a tailwindcss configuration file
+## 🛠️ Tech Stack
 
-[Add more details about features, target users, business model, etc.]
-```
-
-### 2. Follow the Orchestrator's Guidance
-
-The orchestrator will:
-- Analyze your requirements
-- Generate specialized agents
-- Create a detailed blueprint and roadmap
-- Guide you through implementation
-
-### 3. Build with AI Agents
-
-Delegate tasks to specialized agents:
-- Frontend Engineer: UI/UX implementation
-- Backend Engineer: API & business logic
-- Database Engineer: Schema & migrations
-- DevOps Engineer: Infrastructure & deployment
+- **Framework**: React 19 + TypeScript + Vite
+- **Routing**: TanStack Router (client-only SPA)
+- **State Management**: TanStack Store
+- **UI Components**: Radix UI primitives
+- **Styling**: Tailwind CSS v4
+- **Code Quality**: Biome (linting + formatting)
+- **Validation**: Zod
+- **Utilities**: class-variance-authority, clsx, tailwind-merge
 
 ## 📁 Project Structure
 
 ```
-.github/
-├── agents/
-│   ├── core/              # Universal agents
-│   ├── templates/         # Agent templates
-│   └── project/           # Project-specific generated agents
-├── project/
-│   ├── brief.md          # Project brief
-│   ├── blueprint.md      # System design (generated)
-│   ├── roadmap.md        # Implementation plan (generated)
-│   └── history.json      # Task history
-└── workflows/            # GitHub Actions
+src/
+├── app/
+│   └── routes/          # TanStack Router routes
+├── components/
+│   ├── ui/              # UI component primitives
+│   ├── editor/          # Editor interface components
+│   ├── preview/         # Preview system components
+│   ├── sections/        # Design token sections
+│   └── controls/        # Control components
+├── lib/
+│   ├── design-tokens/   # Design token definitions
+│   ├── preview/         # Preview system logic
+│   ├── export/          # Export generators (CSS, Tailwind)
+│   ├── persistence/     # localStorage & URL state
+│   └── utils/           # Utility functions
+├── stores/              # TanStack Store state management
+├── types/               # TypeScript type definitions
+├── hooks/               # Custom React hooks
+└── styles/              # Global styles
 ```
 
-## 🤖 Available Agents
+## 🎯 Features (Planned)
 
-All agents are accessible via GitHub Copilot Chat:
+- 🎨 Visual design token customization
+- 👀 Live preview with 70+ component examples
+- 📤 Export as CSS variables or Tailwind config
+- 💾 Save and share designs via URL
+- 🌓 Dark mode support
+- 📱 Responsive design
+- ♿ WCAG 2.1 AA accessible
 
-### Core Agents (Always Available)
-- `orchestrator.md` - Project manager & task delegator
-- `architect.md` - System designer
-- `code-reviewer.md` - PR reviewer
-- `qa-engineer.md` - Testing & quality assurance
+## 📝 Development Status
 
-### Specialized Agents (Generated as Needed)
-- Frontend, Backend, Database, DevOps, Payments, AI, Mobile, etc.
+Currently in Phase 1: Foundation (Task 1.1 complete)
 
-## 🛠️ Tech Stack
-
-The tech stack will be determined by the orchestrator based on your requirements.
-
-Default stack:
-- **Frontend**: React 19 + Vite + TypeScript + TanStack
-- **Backend**: Elysia + TypeScript
-- **Database**: PostgreSQL
-- **Auth**: Better-auth
-- **Runtime**: Bun
-- **Infrastructure**: Docker + Docker Compose
-
-## 📝 Development Workflow
-
-1. **Ask orchestrator for next task**
-2. **Orchestrator delegates to specialist agent**
-3. **Agent implements feature autonomously**
-4. **Agent creates PR via GitHub MCP**
-5. **Code reviewer reviews PR**
-6. **Auto-merge on approval**
-7. **Repeat**
-
-## 🔗 Resources
-
-- [saas-forge Documentation](https://github.com/yourusername/saas-forge)
-- [GitHub Copilot Chat](https://docs.github.com/en/copilot/github-copilot-chat)
-- [MCP Documentation](https://github.com/github/copilot-mcp)
+See [roadmap.md](.github/project/roadmap.md) for detailed development plan.
 
 ## 📄 License
 
